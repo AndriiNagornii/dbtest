@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<configuration>
+
+	<appender name="APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>logs/application.log</File>
+		<encoder>
+			<pattern>%5p %d %18c - %m%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<maxIndex>10</maxIndex>
+			<FileNamePattern>logs/application.log.%i</FileNamePattern>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>500KB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%5p %d %12c - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="APPENDER" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</configuration>
