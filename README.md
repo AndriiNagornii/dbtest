@@ -2,7 +2,7 @@
 
 Requirments:
 Java 8,
-PostgresSQL(sorry, I have some problem with MySQL installing on my PC),
+PostgresSQL (sorry, I have some problem with MySQL installing on my PC),
 Gradle.
 
 Run
