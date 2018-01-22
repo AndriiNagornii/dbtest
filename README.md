@@ -34,4 +34,5 @@ I tried to use Java blocking queue (LinkedBlockingQueue) to investigate state of
  Project consists from two simple modules. These modules are low depended on each other.
  1. TransactionManager
  2. TransactionExecutor
+ 
  TransactionExecutor invokes only one method of thansaction manager, it's execute executeAtomicTransaction() for inserting data. It means that TransactionExecutor can be applied to different types of TransactionManager, e.g. different SQL Database, NoSQL Database or remote method invocation (http-requests).
